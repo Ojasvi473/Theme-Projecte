@@ -1,38 +1,164 @@
-.App {
+/* Reset some default browser styles */
+body,
+h1,
+h2,
+h3,
+p,
+button {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Global styles */
+body {
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header component styles */
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 1rem 0;
   text-align: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header h1 {
+  font-size: 24px;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: background-color 0.2s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Light theme styles */
+.light-theme {
+  background-color: #fff;
+  color: #333;
+}
+
+/* Dark theme styles */
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+/* TaskForm component styles */
+form {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+}
+
+/* TaskList component styles */
+.task-list {
+  margin-top: 20px;
+}
+
+/* TaskItem component styles */
+.task-item {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.task-item.completed {
+  background-color: #cfc;
+}
+
+.task-item h3 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.task-item p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+.task-item button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: color 0.2s;
+}
+
+.task-item button:hover {
+  color: #0056b3;
+}
+
+/* FilterButtons component styles */
+.filter-buttons {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.filter-buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #007bff;
+  font-size: 16px;
+  margin: 0 10px;
+  padding: 5px 10px;
+  transition: color 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.filter-buttons button.active {
+  font-weight: bold;
+  color: #333;
+}
+
+.filter-buttons button:hover {
+  color: #0056b3;
 }
